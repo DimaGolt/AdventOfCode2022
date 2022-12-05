@@ -53,12 +53,6 @@ void main(List<String> args) async {
     return topThreeCalories;
   }
 
-  // print(file1.split("\r\n\r\n").forEach((element) {
-  //   element.split("\n").forEach((x) {
-  //     int.parse(x);
-  //   });
-  // }));
-
   var wtf = file1
       .split("\r\n\r\n")
       .map((element) => element
@@ -67,7 +61,8 @@ void main(List<String> args) async {
           .reduce((value, element) => value += element))
       .toList()
     ..sort((b, a) => a.compareTo(b));
-  print(wtf.sublist(0, 3).reduce((value, element) => value += element));
+
+  print(wtf.sublist(0, 3).reduce((value, element) => value += element)); //🤮
   print(_topThree());
 }
 
